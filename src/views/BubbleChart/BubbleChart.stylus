@@ -1,0 +1,10 @@
+.d3-bubble-chart
+  .tooltip
+    font-family simsun
+    width 200px
+    height auto
+    background-color rgba(0, 0, 0, 0.6)
+    border-radius 4px
+    color white
+    .text
+      margin-left 6px

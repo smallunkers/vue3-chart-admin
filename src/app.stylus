@@ -1,0 +1,281 @@
+html, body, #app
+    height 100%
+.bg-w
+    background-color white    
+
+u(n)
+  n == 0 ? n: unit(n, px)
+
+$font-colors = {
+    '0': #000,
+    '3': #333,
+    '4': #444,
+    '5': #555,
+    '6': #666,
+    '7': #777,
+    '8': #888,
+    '9': #999,
+    'a': #aaa,
+    'b': #bbb,
+    'c': #ccc,
+    'd': #ddd,
+    'e': #eee,
+    'f': #fff,
+}
+
+for $key, $value in $font-colors
+  .fc{$key}
+    color $value
+
+// font size
+for $n in 0 12 14 16 18 20 22 24 26 28 30 40
+  .fs{$n}
+    font-size u($n)
+
+// all padding
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 36 48 60 72 144
+  .p{$n}
+    padding u($n)
+
+// special padding
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 36 48 60 72 144
+  .pt{$n}
+    padding-top u($n)
+  .pr{$n}
+    padding-right u($n)
+  .pb{$n}
+    padding-bottom u($n)
+  .pl{$n}
+    padding-left u($n)
+
+// all margin
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 36 48 72 144
+  .m{$n}
+    margin u($n)
+
+// special margin
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 36 48 72 144
+  .mt{$n}
+    margin-top u($n)
+  .mr{$n}
+    margin-right u($n)
+  .mb{$n}
+    margin-bottom u($n)
+  .ml{$n}
+    margin-left u($n)
+
+// special opacity
+for $n, $i in 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
+  .op{$i + 1}
+    opacity $n
+
+.bold
+  font-weight bold
+
+.tac
+  text-align center
+
+.tal
+  text-align left
+
+.tar
+  text-align right
+
+.hand
+  cursor pointer
+
+.inline
+  display inline-block
+
+.vt-t
+  vertical-align top
+
+.vt-b
+  vertical-align bottom
+
+.pos-r
+  position absolute
+
+.pos-f
+  position fixed
+
+.pos-a
+  position absolute
+
+.flex 
+    display flex
+
+.flex.f-fd-r,
+.inflex.f-fd-r 
+    flex-direction row
+
+
+.flex.f-fd-rr,
+.inflex.f-fd-rr 
+    flex-direction row-reverse
+
+
+.flex.f-fd-c,
+.inflex.f-fd-c 
+    flex-direction column
+
+
+.flex.f-fd-cr,
+.inflex.f-fd-cr 
+    flex-direction column-reverse
+
+
+.flex.f-jc-fs,
+.inflex.f-jc-fs 
+    justify-content flex-start
+
+
+.flex.f-jc-fe,
+.inflex.f-jc-fe 
+    justify-content flex-end
+
+
+.flex.f-jc-sb,
+.inflex.f-jc-sb 
+    justify-content space-between
+
+
+.flex.f-jc-c,
+.inflex.f-jc-c 
+    justify-content center
+
+
+.flex.f-jc-sa,
+.inflex.f-jc-sa 
+    justify-content space-around
+
+
+.flex.f-ai-fs,
+.inflex.f-ai-fs 
+    align-items flex-start
+
+
+.flex.f-ai-fe,
+.inflex.f-ai-fe 
+    align-items flex-end
+
+
+.flex.f-ai-c,
+.inflex.f-ai-c 
+    align-items center
+
+
+.flex.f-ai-b,
+.inflex.f-ai-b 
+    align-items baseline
+
+
+.flex.f-ai-s,
+.inflex.f-ai-s 
+    align-items stretch
+
+
+.flex.f-fw-w,
+.inflex.f-fw-w 
+    flex-wrap wrap
+
+
+.flex.f-fw-n,
+.inflex.f-fw-n 
+    flex-wrap nowrap
+
+
+.flex.f-fw-wr,
+.inflex.f-fw-wr 
+    flex-wrap wrap-reverse
+
+
+.flex.f-ff-rn,
+.inflex.f-ff-rn 
+    flex-flow row nowrap
+
+
+.flex.f-ff-cn,
+.inflex.f-ff-cn 
+    flex-flow column nowrap
+
+
+.flex.f-ac-c,
+.inflex.f-ac-c 
+    align-content center
+
+
+.flex.f-ac-sb,
+.inflex.f-ac-sb 
+    align-content space-between
+
+
+.flex.f-ac-fs,
+.inflex.f-ac-fs 
+    align-content flex-start
+
+
+.flex.f-ac-fe,
+.inflex.f-ac-fe 
+    align-content flex-end
+
+
+.flex.f-ac-s,
+.inflex.f-ac-s 
+    align-content stretch
+
+
+.flex.f-ac-sa,
+.inflex.f-ac-sa 
+    align-content space-around
+
+
+.flex > .f-fg-1,
+.inflex > .f-fg-1 
+    flex-grow 1
+
+
+.flex > .f-fs-0,
+.inflex > .f-fs-0 
+    flex-shrink 0
+
+
+.flex > .f-as-b,
+.inflex > .f-as-b 
+    align-self baseline
+
+
+.flex > .f-as-c,
+.inflex > .f-as-c 
+    align-self center
+
+
+.flex > .f-as-fs,
+.inflex > .f-as-fs 
+    align-self flex-start
+
+
+.flex > .f-as-fe,
+.inflex > .f-as-fe 
+    align-self flex-end
+
+
+.flex > .f-as-a,
+.inflex > .f-as-a 
+    align-self auto
+
+.flex > .f-as-sh,
+.inflex > .f-as-sh 
+    align-self stretch
+
+.flex-1
+    flex-grow 1
+.flex-2
+    flex-grow 2
+.flex-3
+    flex-grow 3
+.flex-4
+    flex-grow 4
+.flex-5
+    flex-grow 5              
+

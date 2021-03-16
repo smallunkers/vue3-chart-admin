@@ -1,0 +1,83 @@
+.page-slider
+  height 100%
+  padding 24px
+  .chart-modal
+    .chart-container
+      height 100%
+      padding-left 40px
+      padding-right 40px
+      .chart-small
+        border-radius 3px
+        .border-right
+          border-right solid 1px #DCDCDC
+        .chart-small-wrapper
+          width 100%
+          svg
+            width 100%
+            height 60px
+      .chart-wrapper
+        .chart-main
+          position relative
+          .my-tooltip
+            font-family simsun
+            font-size 16px
+            width 240px
+            height auto
+            position absolute
+            background-color rgba(0, 0, 0, 0.6)
+            border-radius 5px
+            color white
+            text-align left
+            padding 8px
+          .my-chart
+            height 420px
+            width 100%
+            overflow visible
+            .axis-name
+              fill rgba(0, 0, 0, 0.2)
+              font-size 10px
+              .text
+                margin-left 6px
+            .dotted-grid
+              stroke #DCDCDC
+              shape-rendering crispEdges
+            //stroke-dasharray 5
+            .hover-line
+              stroke #DCDCDC
+            .my-hide-line
+              stroke #DCDCDC
+            .y-axis
+              .dotted-grid
+                stroke #DCDCDC
+                shape-rendering crispEdges
+              .domain
+                stroke #aaaaaa
+              line
+                stroke #aaaaaa
+              text
+                fill rgba(0, 0, 0, 0.6)
+                font-size 12px
+            .x-axis
+              .tick
+                line
+                  stroke none
+              .domain
+                stroke #aaaaaa
+              text
+                font-size 12px
+                fill rgba(0, 0, 0, 0.6)
+        .my-slider
+          height 32px
+          width 100%
+          overflow visible
+          background-color #C6E2FF
+          stroke-width 1px
+          stroke #666666
+          .start-slider
+            cursor move
+          .end-slider
+            cursor move
+          .slider-block
+            stroke #108ee9
+            stroke-width 4px
+
