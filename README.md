@@ -1,4 +1,5 @@
-# warehouse-admin
+# vue3-chart-admin
+an admin project based vue3.x & tsx & d3.js
 
 ## Project setup
 ```
