@@ -1,11 +1,11 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () =>
+      import(/* webpackChunkName: 'about' */ "../views/FormPage"),
   },
   {
     path: "/vue3/formPage",
@@ -49,11 +49,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "SliderChart",
     component: () => import("../views/SliderChart/Slider"),
   },
-  {
-    path: "/vue3/mapChart",
-    name: "MapChart",
-    component: () => import("../views/MapChart/MapChart"),
-  },
+  // {
+  //   path: "/vue3/mapChart",
+  //   name: "MapChart",
+  //   component: () => import("../views/MapChart/MapChart"),
+  // },
 ];
 
 const router = createRouter({
